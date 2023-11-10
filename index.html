@@ -8,12 +8,13 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            margin: 20px;
+            margin: 0px; /* Remove margin to extend colors to full width */
         }
         button {
             font-size: 16px;
             margin: 10px;
             padding: 10px;
+            flex-grow: 1; /* Allow the buttons to grow if needed */
         }
         .results {
             display: flex;
@@ -35,7 +36,11 @@
         .gradient-bg {
             background: linear-gradient(to right, lightblue 50%, lightpink 50%);
             padding: 20px;
-            margin-top: 20px;
+        }
+        /* New class for the voting section */
+        .voting-section {
+            display: flex;
+            justify-content: space-around;
         }
     </style>
 </head>
@@ -43,12 +48,15 @@
 
     <h1>Bem-vindos ao nosso Ch&aacute; de Revela&ccedil;&atilde;o!</h1>
     <p>Estamos t&atilde;o animados para compartilhar este momento especial com todos voc&ecirc;s.</p>
+    
+    <h2>Qual &eacute; o seu palpite?</h2>
 
     <!-- Adding the new class to the container -->
     <div class="gradient-bg">
-        <h2>Qual &eacute; o seu palpite?</h2>
-        <button onclick="vote('Menino')">#TeamMenino</button>
-        <button onclick="vote('Menina')">#TeamMenina</button>
+        <div class="voting-section">
+            <button onclick="vote('Menino')">#TeamMenino</button>
+            <button onclick="vote('Menina')">#TeamMenina</button>
+        </div>
 
         <div class="results">
             <div class="result">
