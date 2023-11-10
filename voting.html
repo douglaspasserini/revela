@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    ...
+</head>
+<body>
+    ...
+    <div>
+        <h2>Options</h2>
+        <button onclick="vote('Menino')">Vote for Menino</button>
+        <button onclick="vote('Menina')">Vote for Menina</button>
+    </div>
+    ...
+    <script>
+        function vote(option) {
+            let currentVotes = localStorage.getItem(option);
+            currentVotes = currentVotes ? Number(currentVotes) + 1 : 1;
+            localStorage.setItem(option, currentVotes);
+        }
+    </script>
+</body>
+</html>
